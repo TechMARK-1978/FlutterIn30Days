@@ -8,16 +8,15 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData(brightness: Brightness.light),
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      initialRoute: "/home",
+      initialRoute: "/login",
       routes: {
-        "/": (context) => HomePage(),
+        "/": (context) => LoginPage(),
         "/login": (context) => LoginPage(),
         "/home": (context) => HomePage()
       },
